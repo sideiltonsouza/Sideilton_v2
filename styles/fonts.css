@@ -1,0 +1,20 @@
+@font-face {
+    font-family: panton;
+    src: url(../contents/fonts/Panton-Regular.ttf);
+}
+@font-face {
+    font-family: pantonL;
+    src: url(../contents/fonts/Panton-Light.ttf);
+}
+@font-face {
+    font-family: neo;
+    src: url(../contents/fonts/neo-sans-std.otf);
+}
+@font-face {
+    font-family: neoB;
+    src: url(../contents/fonts/Neo-Sans-Std-Bold.otf);
+}
+@font-face {
+    font-family: neoL;
+    src: url(../contents/fonts/Neo-Sans-Std-Light.otf);
+}

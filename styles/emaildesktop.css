@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    overflow-x: none;
+    scrollbar-width: none;
+    font-family: neo, Arial, Helvetica, sans-serif;
+}
+
+/*AGRADECIMENTO*/
+#tanks {
+    width: 100%;
+    max-width: 768px;
+    min-width: 360px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#tanks span {
+    display: block;
+    font-family: neoB, Antartida, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+    color: #fc7a00;
+    width: 50%;
+}
+
+#tanks span h4 {
+    width: 90%;
+    padding: 20px 0;
+    font-size: 0.6em;
+    font-family: neo, Antartida, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(94, 94, 94);
+}
+
+#tanks img {
+    position: absolute;
+    width: 60%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#tanks span a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 12pt;
+    background: #fc7a00;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    border-radius: 4px;
+}

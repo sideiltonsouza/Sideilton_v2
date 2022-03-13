@@ -1,0 +1,81 @@
+@keyframes animacao1 {
+    0%{
+        transform: translate(40px, 20px);
+        opacity: 90%;
+    }
+    100%{
+        transform: translate(0, 25px);
+        opacity: 100%;
+    }
+}
+@keyframes setaBg{
+    0%{
+        bottom: 15vw;
+    }
+    50%{
+        bottom: 20vw;
+    }
+    100%{
+        bottom: 15vw;
+    }
+}
+
+@keyframes animacao2{
+    0%{
+        opacity: 100%;
+        top: 10vh;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 20%;
+        top: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes colorido{
+    0%{
+        background: #59114d;
+    }
+    20%{
+        background: #012622;
+    }
+    40%{
+        background: #003b36;
+    }
+    60%{
+        background: #e98a15;
+    }
+    80%{
+        
+        background: #05c5a5;
+    }
+    100%{
+        background: #59114d;
+    }
+}
+
+@keyframes gradiente{
+    0%{
+        transform: rotate(0);
+        transform: scale(1);
+    }
+    50%{
+       transform: rotate(180deg);
+       transform: scale(.9);
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: scale(1);
+     }
+}
+
+@keyframes balanca {
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-5%,0);
+    }
+    
+}

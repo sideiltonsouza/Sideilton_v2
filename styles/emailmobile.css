@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+}
+body,
+.container,
+.btns,
+#tanks,
+#tanks span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*AGRADECIMENTO*/
+#tanks {
+    width: 100%;
+}
+
+#tanks span {
+    width: 80%;
+    font-family: Antartida, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: 800;
+    color: #fc7a00;
+    margin-top: 50vw;
+}
+
+#tanks span h4 {
+    width: 90%;
+    padding: 20px 0;
+    font-size: 10pt;
+    font-family: Antartida, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(94, 94, 94);
+}
+
+#tanks img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+#tanks span a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 12pt;
+    background: #fc7a00;
+    color: #f1f1f1;
+}
+
+/*FIM AGRADECIMENTO*/
