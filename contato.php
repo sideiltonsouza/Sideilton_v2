@@ -14,25 +14,26 @@
 
 <?php
 
-    $to = "sideiltonsantos@hotmail.com";
-    $cc = "sideiltonsouza@outlook.com";
+    $to = "sideiltonsantos@hotmail.com"; // Email que vai receber as mensagens
+    $cc = "sideiltonsouza@outlook.com"; // Email que recebe uma cópia, pode remover eassa linha caso não for usar
 
+    //Dados recebidos do form
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $mensagem = $_POST['mensagem'];
-    //$classe = "hide";
-    //$enviado = "error";
-    // $retorno = "<h1>Ops! ocorreu um erro :(</h1>
-    //<span>Tente novamente mais tarde.</span>";
-
+    
     // Adiciona o arquivo class.phpmailer.php - você deve especificar corretamente o caminho da pasta com o este arquivo.
-    include_once 'autenticar.php';
+
+
+    include_once 'autenticar.php'; //arquivo com o usuario e senha
     include_once 'PHPMailer/src/PHPMailer.php';
     include_once 'PHPMailer/src/Exception.php';
     include_once 'PHPMailer/src/SMTP.php';
     include_once 'PHPMailer/src/OAuth.php';
-    //Crie uma classe com as credenciais do seu email
+
+    //Crie um arquivo com as credenciais do seu email
     //e armazene nas variaveis $senha e $username
+    //ou adicione nesse mesmo as variaveis $senha e $username
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
@@ -41,7 +42,7 @@
     if ($nome) {
         // Inicia a classe PHPMailer
         $mail = new PHPMailer();
-        // DEFINIÇÃO DOS DADOS DE AUTENTICAÇÃO - Você deve auterar conforme o seu domínio!
+        // DEFINIÇÃO DOS DADOS DE AUTENTICAÇÃO - Você deve alterar conforme o seu domínio!
         $mail->IsSMTP(); // Define que a mensagem será SMTP
         $mail->Host = "smtp.gmail.com"; // Seu endereço de host SMTP
         $mail->SMTPAuth = true; // Define que será utilizada a autenticação -  Mantenha o valor "true"
@@ -56,14 +57,15 @@
         $mail->FromName = "Novo Feedback do site"; // Nome da conta de email
         // DADOS DO DESTINATÁRIO
         $mail->AddAddress($to); // Define qual conta de email receberá a mensagem
-        //$mail->AddAddress('recebe2@dominio.com.br'); // Define qual conta de email receberá a mensagem
-        //$mail->AddCC($cc); // Define qual conta de email receberá uma cópia
-        //$mail->AddBCC($cc); // Define qual conta de email receberá uma cópia oculta
+
         // Definição de HTML/codificação
         $mail->IsHTML(true); // Define que o e-mail será enviado como HTML
         $mail->CharSet = 'utf-8'; // Charset da mensagem (opcional)
+
         // DEFINIÇÃO DA MENSAGEM
+
         $mail->Subject  = "Nome: " . $nome; // Assunto da mensagem
+
         $mail->Body .= "<div style='width: 100%; height: 500px; background: #e9e9e9; text-align:center; padding-top:50px;'>
         <div style='font-family: Verdana, Geneva, Tahoma, sans-serif;'><h3 style='color: #145764; margin-bottom:0;'>Nome: </h3><h3 style='color: #4e4e4e; font-weight:400; margin-top:0;'>" . ucwords($nome) . "</h3></div>
 
@@ -74,25 +76,31 @@
         <h3 style='color: #4e4e4e; font-weight:400; margin-top:0;'>" . $mensagem . "</h3></div>"; //Texto da mensagem
 
 
-        // $mail->Body .= " Assunto: Teste"; // Texto da mensagem
-        //$mail->Body .= nl2br($message); // Texto da mensagem
+        
         // ENVIO DO EMAIL
         $enviado = $mail->Send();
+
         // Limpa os destinatários e os anexos
         $mail->ClearAllRecipients();
 
 
         // Exibe uma mensagem de resultado do envio (sucesso/erro)
         /*if ($enviado) {
-            $classe = "visible";
-            $enviado = "sucess";
-            $retorno = "<h1>Mensagem enviada!</h1>
+
             <span>Obrigado pelo feedback.</span>";
+
         }else{
-            $classe = "visible";
+            
+            <span>Desculpa, houve um erro.</span>";
+
         }*/
     }
     ?>
+
+    <!-- Aqui eu mostro uma mensagem de agradecimento independente de 
+        ter tido sucesso ou não no envio do email, mas essa parte pode
+        e deveria e aconselho a ser logo acima, e só mostrar se tiver enviado
+        ou mostrar uma mensagem diferente caso não tenha sido enviado -->
 
     <div id="tanks">
         <span>Obrigado pelo contato!

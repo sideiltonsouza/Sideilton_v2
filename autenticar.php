@@ -1,4 +1,4 @@
 <?php
-$user = 'sideilton.mail@gmail.com';
-$senha  = 'sid812063';
+$user = 'User do email usado para disparar as mensagens';
+$senha  = 'senha aqui';
 ?>
