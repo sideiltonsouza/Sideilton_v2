@@ -91,7 +91,7 @@
                     //Busca todas as imagens da pasta
 
                     $midiasocial = "contents/images/midiasocial/";
-                    
+
                     foreach (glob("$midiasocial/*", GLOB_NOSORT) as $image) {
                         echo '<img src="' . $image . '"alt=""srcset="">';
                     }

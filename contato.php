@@ -12,7 +12,7 @@
 
 <body>
 
-<?php
+    <?php
 
     $to = "sideiltonsantos@hotmail.com"; // Email que vai receber as mensagens
     $cc = "sideiltonsouza@outlook.com"; // Email que recebe uma cópia, pode remover eassa linha caso não for usar
@@ -21,7 +21,7 @@
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $mensagem = $_POST['mensagem'];
-    
+
     // Adiciona o arquivo class.phpmailer.php - você deve especificar corretamente o caminho da pasta com o este arquivo.
 
 
@@ -76,7 +76,7 @@
         <h3 style='color: #4e4e4e; font-weight:400; margin-top:0;'>" . $mensagem . "</h3></div>"; //Texto da mensagem
 
 
-        
+
         // ENVIO DO EMAIL
         $enviado = $mail->Send();
 
